@@ -2,11 +2,13 @@ import { Streamlit } from "streamlit-component-lib"
 import "./style.css"
 
 const div = document.body.appendChild(document.createElement("div"))
-const button = div.appendChild(document.createElement("button"))
+// Update the button to make the logo the entire button
+const button = div.appendChild(document.createElement("button"));
+button.className = "logo-button";
+
 const icon = button.appendChild(document.createElement("span"))
-const text = button.appendChild(document.createElement("span"))
-icon.className = "icon"
-text.textContent = "AUTHORIZE"
+icon.className = "icon";
+
 button.onclick = async () => {
   // open in popup window
   var left = (screen.width/2)-(popup_width/2);
@@ -57,7 +59,6 @@ function onRender(event) {
   authorization_url = data.args["authorization_url"]
   popup_height = data.args["popup_height"]
   popup_width = data.args["popup_width"]
-  text.textContent =  data.args["name"]
   if(data.args["icon"]) {
     icon.style.backgroundImage = `url("${data.args["icon"]}")`
   } else {

@@ -1,16 +1,10 @@
 button {
   cursor: pointer;
-  border: 0;
-  border-radius: 4px;
-  font-weight: 600;
-  margin: 0;
-  /* width: 200px; */
-  padding: 10px 40px;
-  /* box-shadow: 0 0 20px rgba(104, 85, 224, 0.2); */
-  transition: 0.4s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  border: none;
+  background: none;
+  padding: 0;
+  display: inline-block;
+  transition: transform 0.2s ease, filter 0.2s ease;
 }
 
 span {
@@ -20,12 +14,12 @@ span {
 }
 
 .icon {
-  width: 20px;
-  height: 20px;
+  width: 50px;
+  height: 50px;
   margin-right: 0.5em;
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: 50%;
+  background-position: center;
   display: inline-block;
 }
 
@@ -35,11 +29,34 @@ span {
   border: 1px solid var(--primary-color);
 }
 
-button:hover {
-  color: white;
-  width:;
-  /* box-shadow: 0 0 20px rgba(104, 85, 224, 0.6); */
-  background-color: var(--primary-color);
+/* Make the logo span the entire button */
+button.logo-button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+  width: 250px;
+  height: 50px;
+  display: inline-block;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+button.logo-button .icon {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  display: inline-block;
+}
+
+button.logo-button:hover .icon {
+  filter: brightness(0.8);
+}
+
+button.logo-button:active .icon {
+  filter: brightness(0.6);
+  transform: scale(0.95);
 }
 
 
