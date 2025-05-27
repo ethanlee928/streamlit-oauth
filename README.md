@@ -21,7 +21,7 @@ source .venv/bin/activate
 uv pip install -e .
 ```
 
-### fronteend
+### Frontend
 
 ```bash
 npm install
