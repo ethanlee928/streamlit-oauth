@@ -11,6 +11,23 @@ In today's digital landscape, authorization is crucial for accessing and utilizi
 
 `pip install streamlit-oauth`
 
+## Development
+
+### Python Dependencies
+
+```bash
+uv venv .venv
+source .venv/bin/activate
+uv pip install -e .
+```
+
+### fronteend
+
+```bash
+npm install
+npm run build
+```
+
 ## Getting started
 
 To use Streamlit OAuth, you need to create an OAuth2 component with your authentication details (set your callback url to `https://<YOUR ADDRESS>/component/streamlit_oauth.authorize_button`):
